@@ -1,4 +1,9 @@
-<form action="/companies/create" method="post">
+{{#if errors}}
+  {{> formErrors errors }}
+{{/if}}
+
+<form action="/companies/create" method="post"
+  data-errors='{{{to_json errors}}}'>
   <div class="form-group">
     <label for="name">Name</label>
     <input value="{{this.name}}" type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Enter name">
