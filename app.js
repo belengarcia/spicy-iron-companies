@@ -27,7 +27,6 @@ app.use('/', (res, req) => {
   res.redirect('/companies');
 })
 
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
